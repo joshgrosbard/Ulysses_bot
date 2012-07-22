@@ -8,20 +8,26 @@ Yes, I must.
 His pace slackened. Here. Am I going to aunt Sara's or not? My consubstantial father's voice. Did you see anything of your artist brother Stephen lately? No? Sure he's not down in Strasburg terrace with his aunt Sally? Couldn't he fly a bit higher than that, eh? And and and and tell us, Stephen, how is uncle Si? O, weeping God, the things I married into! De boys up in de hayloft. The drunken little costdrawer and his brother, the cornet player. Highly respectable gondoliers! And skeweyed Walter sirring his father, no less! Sir. Yes, sir. No, sir. Jesus wept: and no wonder, by Christ!
 EOF
 
-source_text_words = source_text.split(' ')
-word_pairs_and_probabilities = {}
+source_text_words = source_text.split(' ') #split source_text and store in new array source_text_words
+word_pairs_and_probabilities = {} #initalize new variable word_pairs_and_probabilities as a hash
 
 source_text_words.each_with_index do |word, index|
-  hash_key = "#{word} #{source_text_words[index + 1]}"
-  hash_value = source_text_words[index + 2]
-  if word_pairs_and_probabilities[hash_key]
-    word_pairs_and_probabilities[hash_key] << hash_value
+  hash_key = "#{word} #{source_text_words[index + 1]}" 
+  hash_value = source_text_words[index + 2] 
+  if word_pairs_and_probabilities[hash_key] 
+    word_pairs_and_probabilities[hash_key] << hash_value 
   else
     word_pairs_and_probabilities[hash_key] = [hash_value]
   end
 end
 
 puts word_pairs_and_probabilities
+
+
+hash_key_to_pass = 
+probable_following_words = word_pairs_and_probabilities[hash_key]
+
+
 
 
 # simple_hash = {}
